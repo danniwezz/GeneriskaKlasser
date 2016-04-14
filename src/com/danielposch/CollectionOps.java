@@ -26,10 +26,20 @@ public class CollectionOps {
     
     // Put your code for reverse here ...
     public static <T> List<T> reverse(List<T> l){
-        
+        T temp;
+        int size = (l.size()-1);
+        for(int i = 0; i < (size()/2) ; i++){
+            temp = l.get(size);
+            l.add(size,l.get(i));
+            l.add(i,temp);
+            size--;
+        }
     }
 
     // Put your code for less here ...
+    public static <T> boolean less(Collection<T> c1, Collection<T> c2, Comparator<T> comp){
+        
+    }
     
     // Example
     public static <T,R> Collection<R>
